@@ -1,0 +1,12 @@
+purpose,rides,avg_miles,avg_minutes,avg_est_fare
+Unspecified,498,9.68,23.23,17.85
+Meeting,186,15.28,29.76,24.73
+Meal/Entertain,160,5.7,16.12,12.44
+Errand/Supplies,128,3.97,12.98,10.16
+Customer Visit,101,20.69,33.42,30.88
+Temporary Site,50,10.47,25.86,19.15
+Between Offices,18,10.94,25.5,19.54
+Moving,4,4.55,15.0,11.05
+Airport/Travel,3,5.5,26.0,14.2
+Charity ($),1,15.1,27.0,24.0
+Commute,1,180.2,185.0,220.7

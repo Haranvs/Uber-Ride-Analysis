@@ -1,0 +1,138 @@
+{
+  "cleaning_log": {
+    "raw_rows": 1156,
+    "totals_rows_removed": 1,
+    "unparseable_dates_removed": 0,
+    "duplicates_removed": 1,
+    "purpose_filled_unspecified": 502,
+    "non_positive_duration_removed": 4,
+    "long_trip_outliers_flagged": 46,
+    "speed_anomalies_flagged": 19,
+    "clean_rows": 1150
+  },
+  "summary_statistics": {
+    "total_rides": 1150,
+    "date_range": "2016-01-01 to 2016-12-31",
+    "total_miles": 12119.8,
+    "mean_miles": 10.54,
+    "median_miles": 6.0,
+    "mean_duration_min": 23.3,
+    "median_duration_min": 16.5,
+    "median_speed_mph": 21.0,
+    "business_share_pct": 93.3,
+    "purpose_recorded_pct": 56.7,
+    "round_trip_share_pct": 24.7,
+    "peak_hours": [
+      15,
+      17,
+      18,
+      13
+    ],
+    "rides_13_to_18h_pct": 48.3,
+    "rides_0_to_6h_pct": 3.2,
+    "busiest_weekday": "Friday",
+    "quietest_weekday": "Wednesday",
+    "busiest_month": "Dec",
+    "quietest_month": "Sep",
+    "avg_rides_per_day": 3.14,
+    "max_rides_in_a_day": 13,
+    "days_with_zero_rides": 74,
+    "estimated_total_spend_usd": 21541.0,
+    "estimated_mean_fare_usd": 18.73,
+    "estimated_median_fare_usd": 13.0,
+    "top_pickup_locations": {
+      "Cary": 201,
+      "Unknown Location": 146,
+      "Morrisville": 85,
+      "Whitebridge": 68,
+      "Islamabad": 56
+    },
+    "purpose_counts": {
+      "Unspecified": 498,
+      "Meeting": 186,
+      "Meal/Entertain": 160,
+      "Errand/Supplies": 128,
+      "Customer Visit": 101,
+      "Temporary Site": 50,
+      "Between Offices": 18,
+      "Moving": 4,
+      "Airport/Travel": 3,
+      "Charity ($)": 1,
+      "Commute": 1
+    },
+    "share_of_miles_from_trips_over_25mi_pct": 39.1,
+    "share_of_trips_over_25mi_pct": 5.6
+  },
+  "forecasting": {
+    "train_period": "2016-01-29 to 2016-10-31 (277 days)",
+    "test_period": "2016-11-01 to 2016-12-31 (61 days)",
+    "best_model": "Ridge Regression",
+    "daily_metrics": {
+      "Naive (yesterday)": {
+        "MAE": 2.082,
+        "RMSE": 2.731,
+        "R2": 0.016,
+        "type": "baseline"
+      },
+      "Seasonal naive (same day last week)": {
+        "MAE": 2.574,
+        "RMSE": 3.292,
+        "R2": -0.429,
+        "type": "baseline"
+      },
+      "7-day average": {
+        "MAE": 2.126,
+        "RMSE": 2.735,
+        "R2": 0.014,
+        "type": "baseline"
+      },
+      "Ridge Regression": {
+        "MAE": 1.938,
+        "RMSE": 2.617,
+        "R2": 0.097,
+        "CV_MAE_train": 2.483,
+        "type": "ml"
+      },
+      "Random Forest": {
+        "MAE": 2.124,
+        "RMSE": 2.853,
+        "R2": -0.073,
+        "CV_MAE_train": 2.044,
+        "type": "ml"
+      },
+      "Gradient Boosting": {
+        "MAE": 2.479,
+        "RMSE": 3.131,
+        "R2": -0.293,
+        "CV_MAE_train": 2.421,
+        "type": "ml"
+      }
+    },
+    "feature_importance": {
+      "roll_mean_7": 0.257,
+      "roll_std_7": 0.124,
+      "dayofmonth": 0.121,
+      "roll_mean_28": 0.108,
+      "lag_2": 0.066,
+      "lag_1": 0.065,
+      "lag_14": 0.06,
+      "month": 0.059,
+      "lag_7": 0.058,
+      "dayofweek": 0.049,
+      "zero_days_last_7": 0.026,
+      "is_weekend": 0.008
+    }
+  },
+  "first_draft_miles_regression": {
+    "model": {
+      "MAE": 10.234,
+      "RMSE": 24.835,
+      "R2": 0.012
+    },
+    "median_baseline": {
+      "MAE": 9.21,
+      "RMSE": 25.722,
+      "R2": -0.06
+    }
+  }
+}
